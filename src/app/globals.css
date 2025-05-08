@@ -8,7 +8,7 @@
   --color-green--500: #20c997;
   --color-button-green: #12b886;
   --color-red--500: #ff6b6b;
-  --color-red--500--20: #ff878733;
+  --color-red--500-20: #ff878733;
   --color-button-blue: #228be6;
   --color-blue--500: #339af0;
   --color-orange--500: #ff922b;
@@ -16,6 +16,8 @@
   --color-gray--900: #212529;
   --color-primary-line-light: #dee2e6;
   --color-input-oncard-light: #f8f9fa;
+  --color-primary-text-light: #343a40;
+  --color-seccondary-text-light: #868e96;
 }
 
 @layer base {
@@ -25,7 +27,7 @@
 
   html,
   body {
-    @apply m-0 p-0 font-sans scroll-smooth;
+    @apply m-0 p-0 font-sans scroll-smooth text-primary-text-light;
   }
 
   input {
@@ -36,5 +38,8 @@
 @layer components {
   .customContainer {
     @apply w-[343px] sm:w-11/12 lg:w-[1000px] xl:w-[1280px] 2xl:w-[1600px] mx-auto;
+  }
+  .verticalLine {
+    @apply w-0.5 bg-primary-line-light;
   }
 }
