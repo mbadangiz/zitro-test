@@ -181,3 +181,10 @@ export interface IN_RedirectUrl {
   ToUrl: null | string;
   RedirectType: null | number;
 }
+
+export interface IN_CustomImageProps {
+  src: string;
+  alt: string;
+  parentClasses?: string;
+  imageClasses?: string;
+}
