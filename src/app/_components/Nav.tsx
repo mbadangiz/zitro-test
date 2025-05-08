@@ -18,15 +18,15 @@ function Nav() {
 function NavTopSection() {
   return (
     <div className="w-full h-[60px] lg:h-24 flex items-center content-center justify-between">
-      <div className="relative w-[121px] h-10">
+      <div className="relative w-16 h-6 lg:w-[121px] lg:h-10">
         <Image src="/images/logo.png" alt="logo" fill />
       </div>
 
-      <div className="relative">
+      <div className="relative hidden lg:block">
         <input
           type="text"
           placeholder="جست و جو"
-          className="h-12 w-[574px] bg-input-oncard-light border-[1px] border-primary-line-light border-solid rounded-xl pr-4 pl-12 placeholder:opacity-100 placeholder:text-gray--800"
+          className="h-12 w-[574px] bg-input-oncard-light border-[1px] text-sm border-primary-line-light border-solid rounded-xl pr-4 pl-12 placeholder:opacity-100 placeholder:text-gray--800"
         />
         <div className="absolute top-1/2 -translate-y-1/2 left-4">
           <CustomImage
@@ -37,21 +37,21 @@ function NavTopSection() {
         </div>
       </div>
 
-      <div className="flex gap-x-8">
+      <div className="flex gap-x-4 lg:gap-x-8  ">
         <CustomImage
           src="/icons/notification.png"
           alt="notification-icon"
-          parentClasses="size-6 cursor-pointer"
+          parentClasses="size-5 lg:size-6 cursor-pointer "
         />
         <CustomImage
           src="/icons/user.png"
           alt="user-icon"
-          parentClasses="size-6 cursor-pointer"
+          parentClasses="size-5 lg:size-6 cursor-pointer"
         />
         <CustomImage
           src="/icons/cart.png"
           alt="cart-icon"
-          parentClasses="size-6 cursor-pointer"
+          parentClasses="size-5 lg:size-6 cursor-pointer"
         />
       </div>
     </div>
@@ -70,7 +70,7 @@ function NavBottomSection() {
       id: 1,
       title: "زیترو آف",
       icon: "/icons/zitro-off.png",
-      extraClasses: "!bg-red--500-20",
+      extraClasses: "!bg-red--500-20 !text-red--500",
     },
     {
       id: 2,

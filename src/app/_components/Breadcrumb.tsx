@@ -5,8 +5,8 @@ function Breadcrumb() {
   const items = ["خانه", "گوشی موبایل", "موبایل", "اپل"];
 
   return (
-    <div className="h-16 flex items-center content-center mb-4">
-      <ol className="flex items-center ">
+    <div className="h-8 lg:h-16 flex items-center content-center lg:mb-4">
+      <ol className="flex items-center">
         {items.map((item, index) => (
           <Link href={""} key={index}>
             <li className="flex items-center gap-x-2">
