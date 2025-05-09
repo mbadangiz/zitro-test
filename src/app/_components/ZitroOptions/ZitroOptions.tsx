@@ -12,7 +12,10 @@ function ZitroOptions() {
     <div className="w-full flex justify-between items-center content-center mt-10">
       {data.map((items) => {
         return (
-          <div className="flex flex-col items-center content-center gap-2">
+          <div
+            key={items.src}
+            className="flex flex-col items-center content-center gap-2"
+          >
             <CustomImage
               src={items.src}
               parentClasses="w-[45px] h-[38px]"

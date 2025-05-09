@@ -17,7 +17,7 @@ function Description({ desc }: { desc: string }) {
     >
       <TitleTag text="توضیحات" />
       <div
-        className={`${showMore ? "h-max" : "h-[290px] overflow-hidden"}`}
+        className={`${showMore ? "h-max" : "h-[260px] overflow-hidden"}`}
         dangerouslySetInnerHTML={{ __html: desc }}
       />
       <div className="grow w-full flex items-center content-center justify-center">
