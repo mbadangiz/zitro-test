@@ -11,6 +11,7 @@
   --color-red--500-20: #ff878733;
   --color-button-blue: #228be6;
   --color-blue--500: #339af0;
+  --color-blue--100: #d0ebff;
   --color-orange--500: #ff922b;
   --color-orange--400: #ffa94d;
   --color-gray--100: #f1f3f5;
@@ -41,9 +42,12 @@
 
 @layer components {
   .customContainer {
-    @apply w-[343px] sm:w-11/12 lg:w-[1000px] xl:w-[1280px] 2xl:w-[1600px] mx-auto;
+    @apply w-[343px] sm:w-11/12 lg:container mx-auto;
   }
   .verticalLine {
     @apply w-0.5 bg-primary-line-light;
+  }
+  .horizantalLine {
+    @apply w-full h-[1px] bg-primary-line-light;
   }
 }

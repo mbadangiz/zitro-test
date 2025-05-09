@@ -1,5 +1,4 @@
 import CustomImage from "@/core/components/customImage";
-import getImage from "@/core/services/getImage";
 import { IN_Insurance } from "@/core/types/interfaces";
 
 export async function ProductSectionInsurance({

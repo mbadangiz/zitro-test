@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none';",
-    domains: ["api.zitro.ir"],
     remotePatterns: [
       {
         protocol: "https",
