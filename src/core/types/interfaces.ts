@@ -1,3 +1,5 @@
+import { ButtonVariant, Size } from "./types";
+
 export interface IN_Response {
   status: string;
   code: number;
@@ -187,4 +189,11 @@ export interface IN_CustomImageProps {
   alt: string;
   parentClasses?: string;
   imageClasses?: string;
+}
+
+export interface IN_ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: Size;
+  children: React.ReactNode;
 }

@@ -2,7 +2,13 @@ import CustomImage from "@/core/components/customImage";
 import { IN_ProductImage } from "@/core/types/interfaces";
 import ImageCarousel from "./ImageCarousel";
 
-async function ImageGallery({ images }: { images: IN_ProductImage[] }) {
+async function ImageGallery({
+  images,
+  selectedImage,
+}: {
+  images: IN_ProductImage[];
+  selectedImage: string;
+}) {
   return (
     <div className="w-full flex flex-col  gap-4 items-center content-center">
       <ImageCarousel images={images} />
@@ -25,7 +31,7 @@ async function ImageGallery({ images }: { images: IN_ProductImage[] }) {
       </div>
       <div className="hidden lg:block">
         <CustomImage
-          src={images[0].imageUrl}
+          src={selectedImage}
           alt=""
           parentClasses="w-[250px] h-[319px]"
           imageClasses="object-center object-cover"

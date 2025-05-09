@@ -16,6 +16,7 @@ function ProductSection({ data }: { data: IN_Response }) {
       attributes,
       insurances,
       productImages,
+      properties,
     },
   } = data;
 
@@ -30,7 +31,10 @@ function ProductSection({ data }: { data: IN_Response }) {
   return (
     <div className="grid grid-cols-12 lg:gap-x-6">
       <div className="col-span-12 lg:col-span-5">
-        <ImageGallery images={productImages} />
+        <ImageGallery
+          images={productImages}
+          selectedImage={properties[0].priceProperties[0].imageUrl}
+        />
       </div>
       <div className="col-span-12 lg:col-span-7 space-y-4 px-4 ">
         <ProductSectionHeader
@@ -39,7 +43,10 @@ function ProductSection({ data }: { data: IN_Response }) {
           brandName={brandName}
           isFake={isFake}
         />
-        <ProductSectionColors colors={colorItems[0].values} />
+        <ProductSectionColors
+          colors={colorItems[0].values}
+          selectedColors={properties[0].value}
+        />
         <div className="lg:hidden horizantalLine"></div>
         <ProductSectionGuarantee />
         <div className="lg:hidden horizantalLine"></div>

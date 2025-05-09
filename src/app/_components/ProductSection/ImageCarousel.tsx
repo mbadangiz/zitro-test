@@ -16,7 +16,7 @@ function ImageCarousel({ images }: { images: IN_ProductImage[] }) {
         pagination={{ clickable: true }}
         loop={true}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper z-0"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
