@@ -5,6 +5,7 @@ import Description from "./Description";
 import Attributes from "./Attributes";
 import { useState } from "react";
 import clsx from "clsx";
+import Comments from "./Comments";
 
 function FullDescription({ data }: { data: IN_Response }) {
   const attributes = data.data.attributes;
@@ -19,11 +20,12 @@ function FullDescription({ data }: { data: IN_Response }) {
   ];
 
   return (
-    <div>
+    <div className=" mb-[300px]">
       <div className="w-full h-[72px] flex items-center content-center  justify-center gap-[29px] bg-input-oncard-light rounded-2xl sticky top-0">
         {fullDescItems.map((items) => {
           return (
             <div
+              key={items.title}
               className={clsx(
                 "w-[104px] h-10 flex items-center content-center justify-center cursor-pointer  text-xs",
                 {
@@ -40,6 +42,7 @@ function FullDescription({ data }: { data: IN_Response }) {
       </div>
       <Description desc={data.data.description} />
       <Attributes attributes={attributes} />
+      <Comments />
     </div>
   );
 }

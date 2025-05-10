@@ -36,6 +36,3 @@ export default async function Home() {
     </div>
   );
 }
-{
-  /* <div dangerouslySetInnerHTML={{ __html: data.data.description }} /> */
-}
