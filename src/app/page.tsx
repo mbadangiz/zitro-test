@@ -5,6 +5,7 @@ import PricePaymentSection from "./_components/PricePaymentSection";
 import { IN_Response } from "@/core/types/interfaces";
 import ZitroOptions from "./_components/ZitroOptions/ZitroOptions";
 import FullDescription from "./_components/FullDescription";
+import SimilarProducts from "./_components/SimilarProducts";
 
 export default async function Home() {
   const res = await getData();
@@ -33,6 +34,7 @@ export default async function Home() {
           <PricePaymentSection data={data} />
         </div>
       </div>
+      <SimilarProducts similar={data.data.upCell} />
     </div>
   );
 }

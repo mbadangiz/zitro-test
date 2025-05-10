@@ -20,7 +20,7 @@ function FullDescription({ data }: { data: IN_Response }) {
   ];
 
   return (
-    <div className=" mb-[300px]">
+    <div>
       <div className="w-full h-[72px] flex items-center content-center  justify-center gap-[29px] bg-input-oncard-light rounded-2xl sticky top-0">
         {fullDescItems.map((items) => {
           return (

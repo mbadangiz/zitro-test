@@ -24,7 +24,10 @@ function Attributes({ attributes }: { attributes: IN_Attribute[] }) {
         {attributes[0].attributes.map((items) => {
           const { title, values } = items;
           return (
-            <li className=" w-full grid grid-cols-12 text-sm py-4 border-2 border-solid border-transparent border-b-primary-line-light">
+            <li
+              key={title}
+              className=" w-full grid grid-cols-12 text-sm py-4 border-2 border-solid border-transparent border-b-primary-line-light"
+            >
               <div className="col-span-3 text-seccondary-text-light">
                 {title}
               </div>
