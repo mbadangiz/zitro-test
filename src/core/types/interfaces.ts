@@ -47,10 +47,10 @@ export interface IN_ProductData {
   publicAttribute: IN_PublicAttribute[];
   attributes: IN_Attribute[];
   upCell: IN_UpCell[];
-  crossCell: any[];
-  bundles: any[];
+  crossCell: string[];
+  bundles: string[];
   insurances: IN_Insurance[];
-  productCrossForcedSells: any[];
+  productCrossForcedSells: string[];
   brandSlug: string;
 }
 

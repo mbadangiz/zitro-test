@@ -1,15 +1,13 @@
-import { getData } from "@/core/services/getData";
-import Breadcrumb from "./_components/Breadcrumb";
-import ProductSection from "./_components/ProductSection";
-import PricePaymentSection from "./_components/PricePaymentSection";
 import { IN_Response } from "@/core/types/interfaces";
-import ZitroOptions from "./_components/ZitroOptions/ZitroOptions";
+import res from "./../../public/product.json";
+import Breadcrumb from "./_components/Breadcrumb";
 import FullDescription from "./_components/FullDescription";
+import PricePaymentSection from "./_components/PricePaymentSection";
+import ProductSection from "./_components/ProductSection";
 import SimilarProducts from "./_components/SimilarProducts";
+import ZitroOptions from "./_components/ZitroOptions/ZitroOptions";
 
 export default async function Home() {
-  const res = await getData();
-
   const data: IN_Response = JSON.parse(JSON.stringify(res));
 
   const sortedByMinPrice = data.data.properties.sort((a, b) => {
