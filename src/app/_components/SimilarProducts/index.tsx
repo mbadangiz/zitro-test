@@ -25,6 +25,7 @@ function SimilarProducts({ similar }: { similar: IN_UpCell[] }) {
                     if (index < 5)
                       return (
                         <div
+                          key={items.value}
                           className="size-3 rounded-xs"
                           style={{
                             backgroundColor: items.value,

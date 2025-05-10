@@ -30,7 +30,7 @@ export default async function Home() {
           <ZitroOptions />
           <FullDescription data={data} />
         </div>
-        <div className="fixed lg:static w-full bottom-0 left-0 lg:col-span-3  ">
+        <div className="fixed lg:static w-full bottom-0 left-0 lg:col-span-3  !z-50 ">
           <PricePaymentSection data={data} />
         </div>
       </div>

@@ -53,6 +53,7 @@ export default function PricePaymentSection({ data }: { data: IN_Response }) {
       src: "/icons/Blu.png",
     },
   ];
+
   const {
     data: { properties },
   } = data;
@@ -62,7 +63,7 @@ export default function PricePaymentSection({ data }: { data: IN_Response }) {
 
   return (
     <>
-      <div className="w-full bg-input-oncard-light border-[1px] border-solid border-primary-line-light  rounded-xl p-4 space-y-4 ">
+      <div className="w-full bg-input-oncard-light border-[1px] border-solid border-primary-line-light  rounded-xl p-4 space-y-4  ">
         <ul className="space-y-1.5 hidden lg:block">
           {verticalInfo.map((items) => {
             const { startIcon, endIcon, extraClasses, id, title } = items;

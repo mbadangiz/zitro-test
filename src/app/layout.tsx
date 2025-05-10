@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { yekanFonts } from "@/constant/yekanFont";
 import Nav from "./_components/Nav";
+import Footer from "./_components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +22,8 @@ export default function RootLayout({
       <body className={`${yekanFonts.variable} `}>
         <Nav />
         {children}
-        <footer className="hidden lg:block">2</footer>
+        <Footer />
+      
       </body>
     </html>
   );

@@ -15,8 +15,8 @@ function FullDescription({ data }: { data: IN_Response }) {
   const fullDescItems = [
     { id: 1, title: "توضیحات" },
     { id: 2, title: " ویژگی‌های کالا" },
-    // { id: 3, title: "نظرات" },
-    // { id: 4, title: "کالاهای مشابه" },
+    { id: 3, title: "نظرات" },
+    { id: 4, title: "کالاهای مشابه" },
   ];
 
   return (

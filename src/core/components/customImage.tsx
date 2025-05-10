@@ -8,7 +8,7 @@ function CustomImage({
   parentClasses,
 }: IN_CustomImageProps) {
   return (
-    <div className={`relative ${parentClasses}`}>
+    <div className={`relative z-0 ${parentClasses}`}>
       <Image src={src} className={imageClasses} alt={alt} fill />
     </div>
   );

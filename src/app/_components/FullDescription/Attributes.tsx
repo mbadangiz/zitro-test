@@ -1,7 +1,7 @@
 import Button from "@/core/components/Button";
 import TitleTag from "@/core/components/TitleTag";
 import { IN_Attribute } from "@/core/types/interfaces";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 function Attributes({ attributes }: { attributes: IN_Attribute[] }) {
   const [showMore, setShowMore] = useState(false);
@@ -22,10 +22,11 @@ function Attributes({ attributes }: { attributes: IN_Attribute[] }) {
         className={`w-full ${showMore ? "h-max" : "h-[240px]"} overflow-hidden`}
       >
         {attributes[0].attributes.map((items) => {
-          const { title, values } = items;
+          const { title, values, id } = items;
+
           return (
             <li
-              key={title}
+              key={id + title}
               className=" w-full grid grid-cols-12 text-sm py-4 border-2 border-solid border-transparent border-b-primary-line-light"
             >
               <div className="col-span-3 text-seccondary-text-light">
@@ -34,10 +35,10 @@ function Attributes({ attributes }: { attributes: IN_Attribute[] }) {
               <div className="col-span-9 ">
                 {values.map((vals, index, main) => {
                   return (
-                    <>
+                    <Fragment key={index}>
                       <span>{vals.title}</span>
                       {index < main.length - 1 && <>/</>}
-                    </>
+                    </Fragment>
                   );
                 })}
               </div>
